@@ -9,8 +9,8 @@ Our current use case:
 Some analogies to help with the bigger picture:
 
 - a simple analogy
-  - from a human perspecitve stopping to consider the basic senses (signt, sound, touch, taste, smell) does help to expand our thinking to consider the importance of corrlating events that occur at the same time across modalities.
-  - as humans we'll smell and taste that milk has gone bad before it looks rotten
+  - from a human perspecitve stopping to consider the basic senses (signt, sound, touch, taste, smell) does help to expand our thinking to consider the importance of correlating events that occur at the same time across modalities.
+  - as humans we'll smell and taste that milk has gone bad before it "looks" rotten
 - a better analogy of true perception and harmonization of various senses... training a humanoid robot to win the balance beam event at the Olympics
   - and giving the robot prehensile opposable toes is cheating
 
@@ -92,3 +92,26 @@ We will enhance our existing adapter-based fine-tuned PaliGemma model to create 
 **Conclusion:**
 
 OmniScience™ represents a groundbreaking advancement in adaptive AI for life sciences manufacturing. It offers real-time, dynamic monitoring and insights, enhancing quality, efficiency, and scalability. By addressing current gaps and setting clear performance goals, OmniScience™ aims to revolutionize biomanufacturing, paving the way for more consistent, efficient, and scalable production processes.
+
+---
+
+## Appendix
+
+### Overview of Vision Models - a different perspecitve
+
+- a big shout out to LandingAI and Andrew Ng for sharing this uncommon perspective and approach
+
+| Model Name | Hugging Face Model | Primary Function | Use Cases |
+|------------|-------------------|-------------------|-----------|
+| OWL-ViT v2 | google/owlv2-base-patch16-ensemble | Object detection and localization | - Open-world object detection<br>- Locating specific objects based on text prompts |
+| Florence-2 | microsoft/florence-base | Multi-purpose vision tasks | - Image captioning<br>- Visual question answering<br>- Object detection |
+| Depth Anything V2 | LiheYoung/depth-anything-v2-small | Depth estimation | - Estimating depth in images<br>- Generating depth maps |
+| CLIP | openai/clip-vit-base-patch32 | Image-text similarity | - Zero-shot image classification<br>- Image-text matching |
+| BLIP | Salesforce/blip-image-captioning-base | Image captioning | - Generating text descriptions of images |
+| LOCA | Custom implementation | Object counting | - Zero-shot object counting<br>- Object counting with visual prompts |
+| GIT v2 | microsoft/git-base-textcaps | Visual question answering | - Answering questions about image content |
+| Grounding DINO | groundingdino/groundingdino-swint-ogc | Object detection and localization | - Detecting objects based on text prompts |
+| SAM | facebook/sam-vit-huge | Instance segmentation | - Text-prompted instance segmentation |
+| DETR | facebook/detr-resnet-50 | Image segmentation | - General image segmentation |
+| ViT | google/vit-base-patch16-224 | Image classification | - General image classification<br>- NSFW content detection |
+| DPT | Intel/dpt-hybrid-midas | Monocular depth estimation | - Estimating depth from single images |
