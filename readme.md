@@ -1,22 +1,72 @@
 # Composable VLMs
 
-Our current use case:
-- Optimize the following processes in isolation before bringing them together in a menaingful application
-  - sight tools:  optimize the validation of detection / segmentation / labeling / classification of images and video using an individual tool
-  - true perception:  bringing the input of the various tools together in a meaningful way to improve what the solution and users can perceive
-- VLMs are not the only tool in our Computer Vision toolbox, using VLMs to augment the quality of the overall solution is what is important here
+## Current Use Case: Enhancing Computer Vision with Multimodal Integration
 
-Some analogies to help with the bigger picture:
+Our focus is on developing a comprehensive, multimodal Computer Vision solution through a two-phase approach:
 
-- a simple analogy
-  - from a human perspecitve stopping to consider the basic senses (signt, sound, touch, taste, smell) does help to expand our thinking to consider the importance of correlating events that occur at the same time across modalities.
-  - as humans we'll smell and taste that milk has gone bad before it "looks" rotten
-- a better analogy of true perception and harmonization of various senses... training a humanoid robot to win the balance beam event at the Olympics
-  - and giving the robot prehensile opposable toes is cheating
+1. **Optimization of Individual Sight Tools:**
+   - Refine and enhance the performance of standalone tools for:
+     * Object detection
+     * Image and video segmentation
+     * Automated labeling
+     * Multi-class classification
+   - Rigorously validate each tool's accuracy and efficiency in isolation
+
+2. **Integration for True Perception:**
+   - Synthesize inputs from various optimized tools to create a cohesive, multi-faceted understanding of visual data
+   - Develop algorithms to meaningfully combine tool outputs, mirroring human-like perceptual abilities
+   - Enhance the overall solution's ability to interpret complex visual scenarios
+
+3. **Leveraging Vision-Language Models (VLMs):**
+   - Incorporate VLMs as a complementary component within our broader Computer Vision toolkit
+   - Utilize VLMs to augment and enrich the outputs of traditional Computer Vision algorithms
+   - Explore synergies between VLMs and other AI models to boost overall solution quality
+
+Our ultimate goal is to create a robust, adaptable Computer Vision system that not only excels in individual tasks but also demonstrates advanced, context-aware visual understanding. By optimizing individual components and then integrating them thoughtfully, we aim to push the boundaries of what AI can perceive and interpret in visual data.
+
+## Analogies for Better Understanding:
+
+1. **The Senses Analogy**:
+   - Humans rely on multiple senses to perceive the world comprehensively.
+   - Even within a single sense like sight, there are various components:
+     * Color vision (cones) for daytime visual processing
+     * Night vision (rods) for low-light conditions
+     * Motion perception through specialized neural pathways
+     * Depth perception using binocular vision
+   - Integration of these visual components creates our complete visual experience.
+   - Beyond sight, we correlate information from sound, touch, taste, and smell.
+   - Example: Detecting spoiled milk
+     * Smell and taste often alert us before visual cues become apparent
+     * This demonstrates the importance of integrating multiple sensory inputs for accurate perception
+
+2. **The Olympic Gymnast Robot**:
+   - Imagine training a humanoid robot to win the balance beam event at the Olympics.
+   - This task requires harmonious integration of various sensory inputs and motor controls:
+     * Visual data processing for spatial awareness
+     * Proprioception for body position sensing
+     * Balance information from vestibular system equivalent
+     * Force feedback from points of contact with the beam
+   - The robot must process all these inputs simultaneously to perform complex routines.
+   - This analogy illustrates the importance of true perception and seamless integration of multiple "senses" in AI systems.
+
+3. **The AI Art Critic**:
+   - Envision an AI system tasked with critiquing modern art installations.
+   - It would need to integrate:
+     * Visual analysis of composition, color, and form
+     * Audio processing for sound installations
+     * Natural language understanding for artwork titles and descriptions
+     * Contextual knowledge of art history and cultural references
+   - This example showcases the need for AI to synthesize information across modalities to form higher-level interpretations and judgments.
+
+These analogies underscore the importance of developing AI systems that can process and integrate multiple streams of information. For example, OpenAI's CLIP model successfully combines text and image data to enhance contextual understanding, demonstrating the potential of multimodal integration. Similarly, Boston Dynamics’ robots utilize sensory data fusion to navigate complex environments effectively.
+
+By refining the integration of visual inputs, we're participating in the broader effort to create AI systems with more human-like perceptual abilities. This approach not only builds upon existing progress but also positions our work within the larger context of advancing AI perception and integration across multiple sensory modalities.
+
+The ultimate goal is to develop AI systems that can seamlessly combine inputs from various sensory domains, leading to more sophisticated, context-aware, and adaptable artificial intelligence. This multi-modal integration is crucial for creating AI that can interact with and understand the world in ways that more closely mirror human cognition and perception.
 
 ---
 
-**Project Title:** OmniScience: Adaptive AI for Dynamic Life Sciences Manufacturing Monitoring
+## Project Title: OmniScience: Adaptive AI for Dynamic Life Sciences Manufacturing Monitoring
 
 ---
 
@@ -101,17 +151,17 @@ OmniScience™ represents a groundbreaking advancement in adaptive AI for life s
 
 - a big shout out to LandingAI and Andrew Ng for sharing this uncommon perspective and approach
 
-| Model Name | Hugging Face Model | Primary Function | Use Cases |
-|------------|-------------------|-------------------|-----------|
-| OWL-ViT v2 | google/owlv2-base-patch16-ensemble | Object detection and localization | - Open-world object detection<br>- Locating specific objects based on text prompts |
-| Florence-2 | microsoft/florence-base | Multi-purpose vision tasks | - Image captioning<br>- Visual question answering<br>- Object detection |
-| Depth Anything V2 | LiheYoung/depth-anything-v2-small | Depth estimation | - Estimating depth in images<br>- Generating depth maps |
-| CLIP | openai/clip-vit-base-patch32 | Image-text similarity | - Zero-shot image classification<br>- Image-text matching |
-| BLIP | Salesforce/blip-image-captioning-base | Image captioning | - Generating text descriptions of images |
-| LOCA | Custom implementation | Object counting | - Zero-shot object counting<br>- Object counting with visual prompts |
-| GIT v2 | microsoft/git-base-textcaps | Visual question answering | - Answering questions about image content |
-| Grounding DINO | groundingdino/groundingdino-swint-ogc | Object detection and localization | - Detecting objects based on text prompts |
-| SAM | facebook/sam-vit-huge | Instance segmentation | - Text-prompted instance segmentation |
-| DETR | facebook/detr-resnet-50 | Image segmentation | - General image segmentation |
-| ViT | google/vit-base-patch16-224 | Image classification | - General image classification<br>- NSFW content detection |
-| DPT | Intel/dpt-hybrid-midas | Monocular depth estimation | - Estimating depth from single images |
+| Model Name          | Hugging Face Model                  | Primary Function               | Use Cases                                                    |
+|---------------------|-------------------------------------|-------------------------------|--------------------------------------------------------------|
+| OWL-ViT v2          | google/owlv2-base-patch16-ensemble  | Object detection and localization | - Open-world object detection<br>- Locating specific objects based on text prompts |
+| Florence-2          | microsoft/florence-base             | Multi-purpose vision tasks      | - Image captioning<br>- Visual question answering<br>- Object detection |
+| Depth Anything V2   | LiheYoung/depth-anything-v2-small   | Depth estimation                | - Estimating depth in images<br>- Generating depth maps      |
+| CLIP                | openai/clip-vit-base-patch32        | Image-text similarity           | - Zero-shot image classification<br>- Image-text matching    |
+| BLIP                | Salesforce/blip-image-captioning-base | Image captioning                | - Generating text descriptions of images                    |
+| LOCA                | Custom implementation               | Object counting                 | - Zero-shot object counting<br>- Object counting with visual prompts |
+| GIT v2              | microsoft/git-base-textcaps         | Visual question answering and image captioning | - Answering questions about image content<br>- Generating text descriptions of images |
+| Grounding DINO      | groundingdino/groundingdino-swint-ogc | Object detection and localization | - Detecting objects based on text prompts                   |
+| SAM                 | facebook/sam-vit-huge               | Instance segmentation           | - Text-prompted instance segmentation                       |
+| DETR                | facebook/detr-resnet-50             | Object detection                | - General object detection                                  |
+| ViT                 | google/vit-base-patch16-224         | Image classification            | - General image classification<br>- NSFW content detection  |
+| DPT                 | Intel/dpt-hybrid-midas              | Monocular depth estimation      | - Estimating depth from single images                       |
